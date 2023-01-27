@@ -1,15 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header>
-      <nav class="header__navbar"></nav>
+    <nav class="header__navbar">
+      <a class="navbar-brand" href="#">
+        <img src="img/logo.svg" alt="logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg"
+        aria-controls="navbarOffcanvasLg">">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvasLg"
+        aria-labelledby="navbarOffcanvasLgLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav flex-grow-1 pe-3">
+            <li class="nav-item dropdown m-sm-2">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Features
+              </a>
+              <ul class="dropdown-menu shadow bg-body rounded border border-opacity-100">
+                <li><a class="dropdown-item" href="#"><img src="img/icon-todo.svg" alt="Todo" class="p-2">Todo
+                    List</a></li>
+                <li><a class="dropdown-item" href="#"><img src="img/icon-calendar.svg" alt="Calendar"
+                      class="p-2">Calendar</a></li>
+                <li><a class="dropdown-item" href="#"><img src="img/icon-reminders.svg" alt="Reminders"
+                      class="p-2">Reminders</a>
+                </li>
+                <li><a class="dropdown-item" href="#"><img src="img/icon-planning.svg" alt="Planning"
+                      class="p-2">Planning</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown m-sm-2">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Company
+              </a>
+              <ul class="dropdown-menu shadow bg-body rounded border border-opacity-100">
+                <li><a class="dropdown-item" href="#">History</a></li>
+                <li><a class="dropdown-item" href="#">Our Team</a></li>
+                <li><a class="dropdown-item" href="#">Blog</a></li>
+              </ul>
+            </li>
+            <li class="nav-item m-sm-2">
+              <a class="nav-link" href="#">Careers</a>
+            </li>
+            <li class="nav-item m-sm-2">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <div class="navbar-nav justify-content-end flex-grow-1">
+              <button type="button" class="btn btn-light m-sm-2">Login</button>
+              <button type="button" class="btn btn-light border-dark border border-2 m-sm-2">Register</button>
+            </div>
+          </ul>
+        </div>
+    </nav>
 
       <section class="header__main">
         <aside class="section__left">
