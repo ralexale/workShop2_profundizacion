@@ -15,4 +15,126 @@ header {
   height: 100%;
 }
 
+.header__main {
+  text-align: center;
+  justify-content: space-between;
+  display: flex;
+  background-color: hsl(0deg, 0%, 98%);
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+}
+.header__main .section__left {
+  position: relative;
+  padding: 30px;
+  text-align: justify;
+  gap: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 40%;
+  height: 640px;
+}
+.header__main .section__left p {
+  color: hsl(0deg, 0%, 41%);
+  font-size: 18px;
+  line-height: 25px;
+}
+.header__main .section__left h1 {
+  margin-top: 60px;
+  width: 100%;
+  letter-spacing: 2px;
+  font-size: 62px;
+}
+.header__main .section__left .aside__btn {
+  background-color: hsl(0deg, 0%, 8%);
+  color: hsl(0deg, 0%, 98%);
+  padding: 15px;
+  width: 150px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: "Epilogue", sans-serif;
+  font-size: 18px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+.header__main .section__left .aside__btn:hover {
+  background-color: hsl(0deg, 0%, 98%);
+  color: hsl(0deg, 0%, 8%);
+}
+.header__main .section__left .aside__clients {
+  bottom: 0;
+  position: absolute;
+  height: 40px;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 10px 0 10px;
+  width: 90%;
+}
+.header__main .section__left .aside__clients img {
+  object-fit: contain;
+  width: 20%;
+  height: 100%;
+}
+.header__main .section__right {
+  width: 40%;
+  height: 100%;
+}
+.header__main .section__right .img {
+  height: 640px;
+  width: 100%;
+  background-image: url(../img/image-hero-desktop.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 800px) {
+  .header__main {
+    position: relative;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    justify-content: initial;
+  }
+  .header__main .section__left {
+    align-items: center;
+    text-align: center;
+    padding: 15px 15px 70px 15px;
+    width: 100%;
+    height: 100%;
+    margin-top: 570px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .header__main .section__left h1 {
+    font-size: 32px;
+  }
+  .header__main .section__left p {
+    letter-spacing: 0;
+    font-size: 16px;
+  }
+  .header__main .section__left .aside__clients {
+    bottom: 60px;
+  }
+  .header__main .section__left .aside__btn {
+    margin-bottom: 100px;
+  }
+  .header__main .section__right {
+    padding: 0;
+    border: 1px solid green;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .header__main .section__right img {
+    width: 100%;
+    background: url(../img/image-hero-mobile.png);
+    object-fit: cover;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
