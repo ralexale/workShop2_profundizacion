@@ -1,0 +1,17 @@
+@use 'variables' as v;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: v.$Almost-White;
+  font-family: v.$font-Epilogue;
+}
+
+header {
+  width: 100%;
+  height: 100%;
+}
