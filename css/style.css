@@ -136,5 +136,148 @@ header {
     object-fit: cover;
   }
 }
+.header__navbar {
+  color: hsl(0deg, 0%, 41%);
+  background-color: hsl(0deg, 0%, 98%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown * {
+  box-sizing: border-box;
+}
+
+.select {
+  background-color: hsl(0deg, 0%, 98%);
+  display: flex;
+  align-items: center;
+  border: 2px hsl(0deg, 0%, 98%) solid;
+  padding: 1em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.select-cliked {
+  border: 2px hsl(0deg, 0%, 98%) solid;
+  box-shadow: 0 0 0.8em hsl(0deg, 0%, 98%);
+}
+
+.select:hover {
+  background: hsl(0deg, 0%, 98%);
+}
+
+.caret {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid black;
+  transition: 0.3;
+}
+
+.caret-rotate {
+  transform: rotate(180deg);
+}
+
+.menu {
+  list-style: none;
+  padding: 0.2em 0.5em;
+  background-color: hsl(0deg, 0%, 98%);
+  border: 1px hsl(0deg, 0%, 98%) solid;
+  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+  border-radius: 0.5em;
+  position: absolute;
+  top: 3em;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  opacity: 0;
+  display: none;
+  transition: 0.2s;
+  z-index: 1;
+}
+
+.menu li {
+  padding: 0.7em 0.5em;
+  margin: 0.3em 0;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.menu li:hover {
+  background: hsl(0deg, 0%, 98%);
+}
+
+.active {
+  background: hsl(0deg, 0%, 98%);
+}
+
+.menu-open {
+  display: block;
+  opacity: 1;
+}
+
+.item {
+  list-style: none;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.btn_login {
+  background-color: hsl(0deg, 0%, 98%);
+  color: hsl(0deg, 0%, 41%);
+  padding: 15px;
+  width: 150px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: "Epilogue", sans-serif;
+  font-size: 18px;
+  border-radius: 15px;
+  transition: 0.3s;
+  border: none;
+}
+
+.btn_Register {
+  background-color: hsl(0deg, 0%, 98%);
+  color: hsl(0deg, 0%, 41%);
+  padding: 15px;
+  width: 150px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: "Epilogue", sans-serif;
+  font-size: 18px;
+  border-radius: 15px;
+  transition: 0.3s;
+  border: 1px solid hsl(0deg, 0%, 41%);
+}
+
+.btn_login:hover {
+  color: hsl(0deg, 0%, 8%);
+}
+
+.btn_Register:hover {
+  color: hsl(0deg, 0%, 8%);
+  border: 1px solid hsl(0deg, 0%, 8%);
+}
+
+.selected:hover {
+  color: hsl(0deg, 0%, 8%);
+}
+
+.item:hover {
+  color: hsl(0deg, 0%, 8%);
+}
 
 /*# sourceMappingURL=style.css.map */
