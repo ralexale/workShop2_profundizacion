@@ -1,5 +1,4 @@
 @use 'variables' as v;
-@use 'body';
 
 .header__main {
   text-align: center;
@@ -110,7 +109,6 @@
     }
     .section__right {
       padding: 0;
-      border: 1px solid green;
       top: 0;
       position: absolute;
       width: 100%;

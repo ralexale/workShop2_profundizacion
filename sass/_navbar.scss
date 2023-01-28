@@ -11,8 +11,16 @@
 
 .bar {
   display: flex;
+  position: relative;
+  gap: 30px;
   align-items: center;
-  flex-direction: row;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 650px;
 }
 
 .dropdown {
@@ -142,4 +150,81 @@
 
 .item:hover {
   color: v.$Almost-Black;
+}
+.btnMenu {
+  display: none;
+}
+
+.close-icon {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .bg-menu {
+    display: none;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.397);
+    position: absolute;
+  }
+
+  .menu {
+    width: 140px;
+    left: 70%;
+  }
+
+  .bar {
+    transition: transform 0.9s;
+    transform: translateX(100%);
+    padding: 20px;
+    background-color: v.$Almost-White;
+    top: 0;
+    right: 0;
+    display: none;
+    align-items: flex-start;
+    flex-direction: column;
+    z-index: 200;
+    width: 40%;
+    height: 100%;
+    position: absolute;
+
+    .select {
+      padding: 0;
+    }
+    .item {
+      margin: 0;
+    }
+    .close-icon {
+      height: 30px;
+      display: flex;
+      justify-content: end;
+      width: 100%;
+      .btnclose {
+        cursor: pointer;
+        border: none;
+        background-color: v.$Almost-White;
+      }
+    }
+  }
+
+  .btnMenu {
+    cursor: pointer;
+    display: block;
+    border: 1;
+    background-color: v.$Almost-White;
+    border: none;
+  }
+
+  .navbar-nav {
+    display: none;
+    button {
+      display: none;
+    }
+  }
+}
+
+.openBar {
+  transition: transform 0.9s;
+  transform: translateX(0);
 }

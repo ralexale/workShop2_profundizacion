@@ -1,5 +1,6 @@
+//features y company menu
+
 const dropdowns = document.querySelectorAll('.dropdown');
-console.log('HOLa');
 
 dropdowns.forEach((dropdown) => {
   const select = dropdown.querySelector('.select');
@@ -26,4 +27,29 @@ dropdowns.forEach((dropdown) => {
       Option.classList.add('active');
     });
   });
+});
+
+//slide bar responsive menu
+const slidebar = document.querySelector('.bar');
+const bgSlidebar = document.querySelector('.bg-menu');
+const btnOpenBar = document.querySelector('.btnMenu');
+
+btnOpenBar.addEventListener('click', () => {
+  slidebar.style.display = 'flex';
+
+  setTimeout(() => {
+    bgSlidebar.style.display = 'flex';
+    slidebar.style.transform = 'translateX(0%)';
+  }, 0);
+});
+
+//close button
+
+const btnClose = document.querySelector('.btnclose');
+
+btnClose.addEventListener('click', () => {
+  slidebar.style.transform = 'translateX(100%)';
+  setTimeout(() => {
+    bgSlidebar.style.display = 'none';
+  }, 700);
 });

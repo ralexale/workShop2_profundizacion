@@ -6,11 +6,13 @@
 }
 
 body {
+  position: relative;
   background-color: hsl(0deg, 0%, 98%);
   font-family: "Epilogue", sans-serif;
 }
 
 header {
+  position: rel;
   width: 100%;
   height: 100%;
 }
@@ -124,7 +126,6 @@ header {
   }
   .header__main .section__right {
     padding: 0;
-    border: 1px solid green;
     top: 0;
     position: absolute;
     width: 100%;
@@ -147,8 +148,16 @@ header {
 
 .bar {
   display: flex;
+  position: relative;
+  gap: 30px;
   align-items: center;
-  flex-direction: row;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 650px;
 }
 
 .dropdown {
@@ -278,6 +287,78 @@ header {
 
 .item:hover {
   color: hsl(0deg, 0%, 8%);
+}
+
+.btnMenu {
+  display: none;
+}
+
+.close-icon {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .bg-menu {
+    display: none;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.397);
+    position: absolute;
+  }
+  .menu {
+    width: 140px;
+    left: 70%;
+  }
+  .bar {
+    transition: transform 0.9s;
+    transform: translateX(100%);
+    padding: 20px;
+    background-color: hsl(0deg, 0%, 98%);
+    top: 0;
+    right: 0;
+    display: none;
+    align-items: flex-start;
+    flex-direction: column;
+    z-index: 200;
+    width: 40%;
+    height: 100%;
+    position: absolute;
+  }
+  .bar .select {
+    padding: 0;
+  }
+  .bar .item {
+    margin: 0;
+  }
+  .bar .close-icon {
+    height: 30px;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+  }
+  .bar .close-icon .btnclose {
+    cursor: pointer;
+    border: none;
+    background-color: hsl(0deg, 0%, 98%);
+  }
+  .btnMenu {
+    cursor: pointer;
+    display: block;
+    border: 1;
+    background-color: hsl(0deg, 0%, 98%);
+    border: none;
+  }
+  .navbar-nav {
+    display: none;
+  }
+  .navbar-nav button {
+    display: none;
+  }
+}
+.openBar {
+  transition: transform 0.9s;
+  transform: translateX(0);
 }
 
 /*# sourceMappingURL=style.css.map */
