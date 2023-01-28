@@ -1,0 +1,19 @@
+@use 'variables' as v;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  background-color: v.$Almost-White;
+  font-family: v.$font-Epilogue;
+}
+
+header {
+  position: rel;
+  width: 100%;
+  height: 100%;
+}

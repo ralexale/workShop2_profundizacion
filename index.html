@@ -1,17 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Worshop2</title>
+    <link
+      rel="shortcut icon"
+      href="img/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
+
   <body>
     <header>
-      <nav class="header__navbar"></nav>
+      <div class="bg-menu"></div>
 
-      <section class="header__main"></section>
+      <nav class="header__navbar">
+        <a class="navbar-brand">
+          <img src="img/logo.svg" alt="Logo" />
+        </a>
+        <button class="btnMenu">
+          <img class="img_menu" src="img/icon-menu.svg" alt="menu-icon" />
+        </button>
+        <div class="bar">
+          <div class="close-icon">
+            <button class="btnclose">
+              <img
+                class="close-icon"
+                src="img/icon-close-menu.svg"
+                alt="close-menu"
+              />
+            </button>
+          </div>
+          <div class="dropdown">
+            <div class="select">
+              <span class="selected">Feactures</span>
+              <div class="caret"></div>
+            </div>
+            <ul class="menu">
+              <li>
+                Todo list<img
+                  src="img/icon-todo.svg"
+                  alt="Todo"
+                  class="Todo_list"
+                />
+              </li>
+              <li>
+                Calendar<img
+                  src="img/icon-calendar.svg"
+                  alt="Calendar"
+                  class="Calendar"
+                />
+              </li>
+              <li>
+                Reminders<img
+                  src="img/icon-reminders.svg"
+                  alt="Reminders"
+                  class="Reminders"
+                />
+              </li>
+              <li>
+                Planning<img
+                  src="img/icon-planning.svg"
+                  alt="Planning"
+                  class="Planning"
+                />
+              </li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <div class="select">
+              <span class="selected">Company</span>
+              <div class="caret"></div>
+            </div>
+            <ul class="menu">
+              <li class="active">History</li>
+              <li>Our Team</li>
+              <li>Blog</li>
+            </ul>
+          </div>
+          <li class="item"><a>Careers</a></li>
+          <li class="item"><a>About</a></li>
+        </div>
+        <div class="navbar-nav">
+          <button type="button" class="btn_login">Login</button>
+          <button type="button" class="btn_Register">Register</button>
+        </div>
+      </nav>
+
+      <section class="header__main">
+        <aside class="section__left">
+          <h1 class="aside__h1">Make remote work</h1>
+          <p class="aside__p">
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituas, and watch productivity soar.
+          </p>
+          <button class="aside__btn">Learn more</button>
+          <figure class="aside__clients">
+            <img src="img/client-databiz.svg" alt="client-databix" />
+            <img src="img/client-audiophile.svg" alt="client-audiophile" />
+            <img src="img/client-meet.svg" alt="client-meet" />
+            <img src="img/client-maker.svg" alt="client-maker" />
+          </figure>
+        </aside>
+        <aside class="section__right">
+          <figure class="img"></figure>
+        </aside>
+      </section>
     </header>
     <script src="script.js"></script>
   </body>
