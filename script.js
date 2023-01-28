@@ -35,12 +35,10 @@ const bgSlidebar = document.querySelector('.bg-menu');
 const btnOpenBar = document.querySelector('.btnMenu');
 
 btnOpenBar.addEventListener('click', () => {
-  slidebar.style.display = 'flex';
-
-  setTimeout(() => {
-    bgSlidebar.style.display = 'flex';
-    slidebar.style.transform = 'translateX(0%)';
-  }, 0);
+  bgSlidebar.style.display = 'flex';
+  slidebar.style.opacity = '1';
+  slidebar.style.visibility = 'visible';
+  slidebar.style.transform = translateX(0);
 });
 
 //close button
@@ -48,8 +46,10 @@ btnOpenBar.addEventListener('click', () => {
 const btnClose = document.querySelector('.btnclose');
 
 btnClose.addEventListener('click', () => {
-  slidebar.style.transform = 'translateX(100%)';
+  slidebar.style.opacity = '0';
+  slidebar.style.visibility = 'hidden';
+
   setTimeout(() => {
     bgSlidebar.style.display = 'none';
-  }, 700);
+  }, 4);
 });

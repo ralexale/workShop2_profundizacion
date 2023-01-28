@@ -24,7 +24,7 @@ header {
   background-color: hsl(0deg, 0%, 98%);
   width: 100%;
   height: 100%;
-  padding: 50px;
+  padding: 0px 100px 50px;
 }
 .header__main .section__left {
   position: relative;
@@ -43,7 +43,7 @@ header {
   line-height: 25px;
 }
 .header__main .section__left h1 {
-  margin-top: 60px;
+  margin-top: 20px;
   width: 100%;
   letter-spacing: 2px;
   font-size: 62px;
@@ -65,7 +65,7 @@ header {
   color: hsl(0deg, 0%, 8%);
 }
 .header__main .section__left .aside__clients {
-  bottom: 0;
+  bottom: 40px;
   position: absolute;
   height: 40px;
   display: flex;
@@ -83,7 +83,7 @@ header {
   height: 100%;
 }
 .header__main .section__right .img {
-  height: 640px;
+  height: 600px;
   width: 100%;
   background-image: url(../img/image-hero-desktop.png);
   background-size: contain;
@@ -93,48 +93,50 @@ header {
 
 @media (max-width: 800px) {
   .header__main {
-    position: relative;
     padding: 0;
     width: 100%;
     height: 100%;
-    display: inline-block;
+    display: flex;
+    flex-direction: column-reverse;
     justify-content: initial;
   }
   .header__main .section__left {
     align-items: center;
     text-align: center;
-    padding: 15px 15px 70px 15px;
+    padding: 15px 15px 30px 15px;
     width: 100%;
     height: 100%;
-    margin-top: 570px;
     display: flex;
     flex-direction: column;
     gap: 30px;
   }
   .header__main .section__left h1 {
+    margin: 0;
     font-size: 32px;
   }
   .header__main .section__left p {
+    width: 90%;
     letter-spacing: 0;
-    font-size: 16px;
+    font-size: 15px;
   }
   .header__main .section__left .aside__clients {
-    bottom: 60px;
+    bottom: 40px;
   }
   .header__main .section__left .aside__btn {
     margin-bottom: 100px;
   }
   .header__main .section__right {
-    padding: 0;
-    top: 0;
-    position: absolute;
+    margin: 0;
     width: 100%;
     height: 100%;
   }
-  .header__main .section__right img {
+  .header__main .section__right .img {
+    height: 420px;
     width: 100%;
     background: url(../img/image-hero-mobile.png);
-    object-fit: cover;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 }
 .header__navbar {
@@ -143,7 +145,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
 }
 
 .bar {
@@ -297,11 +299,15 @@ header {
   display: none;
 }
 
+.btns-Slidebar {
+  display: none;
+}
+
 @media (max-width: 800px) {
   .bg-menu {
     display: none;
     z-index: 100;
-    width: 100%;
+    width: 100vw;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.397);
     position: absolute;
@@ -311,17 +317,18 @@ header {
     left: 70%;
   }
   .bar {
-    transition: transform 0.9s;
-    transform: translateX(100%);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.6s;
     padding: 20px;
     background-color: hsl(0deg, 0%, 98%);
     top: 0;
     right: 0;
-    display: none;
+    display: flex;
     align-items: flex-start;
     flex-direction: column;
     z-index: 200;
-    width: 40%;
+    width: 50%;
     height: 100%;
     position: absolute;
   }
@@ -355,10 +362,30 @@ header {
   .navbar-nav button {
     display: none;
   }
-}
-.openBar {
-  transition: transform 0.9s;
-  transform: translateX(0);
+  .btns-Slidebar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 120px;
+    gap: 20px;
+  }
+  .btns-Slidebar button {
+    padding: 5px;
+    border-radius: 10px;
+    background-color: hsl(0deg, 0%, 98%);
+    border: none;
+    color: hsl(0deg, 0%, 41%);
+    font-size: 18px;
+  }
+  .btns-Slidebar .btn_bar2 {
+    border: 2px solid hsl(0deg, 0%, 41%);
+  }
+  .btns-Slidebar button:hover {
+    color: hsl(0deg, 0%, 8%);
+  }
+  .btns-Slidebar .btn_bar2:hover {
+    border: 2px solid hsl(0deg, 0%, 8%);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
