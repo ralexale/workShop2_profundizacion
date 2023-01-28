@@ -1,12 +1,12 @@
-const dropdowns = document.querySelector('.dropdown');
+const dropdowns = document.querySelectorAll('.dropdown');
+console.log('HOLa');
 
-dropdowns.forEach(dropdowns => {
-  const select = dropdowns.querySelector('.select');
-  const caret = dropdowns.querySelector('.caret');
-  const menu = dropdowns.querySelectorAll('.menu');
-  const options = dropdowns.querySelector('.menu li');
-  const selected = dropdowns.querySelector('.selected');
-
+dropdowns.forEach((dropdown) => {
+  const select = dropdown.querySelector('.select');
+  const caret = dropdown.querySelector('.caret');
+  const menu = dropdown.querySelector('.menu');
+  const options = dropdown.querySelectorAll('.menu li');
+  const selected = dropdown.querySelector('.selected');
 
   select.addEventListener('click', () => {
     select.classList.toggle('select-clicked');
@@ -14,13 +14,13 @@ dropdowns.forEach(dropdowns => {
     menu.classList.toggle('menu-open');
   });
 
-  options.forEach(Option => {
+  options.forEach((Option) => {
     Option.addEventListener('click', () => {
       selected.innerText = Option.innerText;
       select.classList.remove('select-clicked');
       caret.classList.remove('caret-rotate');
       menu.classList.remove('menu-open');
-      options.forEach(Option => {
+      options.forEach((Option) => {
         Option.classList.remove('active');
       });
       Option.classList.add('active');
